@@ -30,9 +30,9 @@ public class PostListActivity extends AppCompatActivity {
         try {
             is = getAssets().open(DATA_JSON_FILE_NAME);
             feedDataStore = new FileBasedFeedDataStore(gson, is);
-            feedDataStore.getPostList(new FeedDataStore.OnRedditPostsRetrievedListener() {
+            feedDataStore.getPostList("androiddev", null, null, new FeedDataStore.OnRedditPostsRetrievedListener() {
                 @Override
-                public void onRedditPostsRetrieved(List<RedditPost> postList, Exception ex) {
+                public void onRedditPostsRetrieved(List<RedditPost> postList, String after, Exception ex) {
                     displayPostList(postList);
                 }
             });

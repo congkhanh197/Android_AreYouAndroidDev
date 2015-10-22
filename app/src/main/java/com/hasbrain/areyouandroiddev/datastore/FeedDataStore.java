@@ -9,9 +9,10 @@ import java.util.List;
  */
 public interface FeedDataStore {
     interface OnRedditPostsRetrievedListener {
-        void onRedditPostsRetrieved(List<RedditPost> postList, Exception ex);
+        void onRedditPostsRetrieved(List<RedditPost> postList, String after, Exception ex);
     }
 
-    void getPostList(OnRedditPostsRetrievedListener onRedditPostsRetrievedListener);
+    void getPostList(String topic, String before, String after,
+            OnRedditPostsRetrievedListener onRedditPostsRetrievedListener);
 
 }
