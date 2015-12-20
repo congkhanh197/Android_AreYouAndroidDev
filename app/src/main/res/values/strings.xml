@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AreYouAndroidDev</string>
+    <string name="see_more">See more interesting posts about Android development at https://www.reddit.com/r/androiddev</string>
+    <string name="url">https://www.reddit.com/r/androiddev</string>
 </resources>
