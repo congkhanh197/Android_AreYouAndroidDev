@@ -61,12 +61,7 @@ public class ListViewAdapter extends ArrayAdapter<RedditPost> {
                 v = inflater.inflate(R.layout.type_item_view, parent, false);
             }
 
-//            v.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//
-//                }
-//            });
+
         }
         if (type != TYPE_TEXT_ITEM) {
             RedditPost redditPost = redditPosts.get(position);
@@ -107,11 +102,6 @@ public class ListViewAdapter extends ArrayAdapter<RedditPost> {
 
 
         }
-        //TODO
-        //ViewHolder pattern? why do we need to use viewholder?
-        //LayoutInflater: meaning of  `parent` argument
-        //Inner class, anonymous class
-
         return v;
     }
 }

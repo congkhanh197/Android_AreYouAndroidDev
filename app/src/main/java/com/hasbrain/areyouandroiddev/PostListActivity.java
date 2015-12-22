@@ -81,16 +81,17 @@ public class PostListActivity extends AppCompatActivity {
             listView.setAdapter(lvAdapter);
 //            setClick(listView, postList);
             listView.setOnItemClickListener(new OnPostClickListener(postList, this));
-        }else {
+        } else {
 
             gridView.setAdapter(lvAdapter);
-            setClick(gridView,postList);
+            setClick(gridView, postList);
 
 
         }
 
     }
-    protected void setClick (AbsListView view,final List<RedditPost> postList){
+
+    protected void setClick(AbsListView view, final List<RedditPost> postList) {
         view.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent myIntent = new Intent(view.getContext(), PostViewActivity.class);
@@ -105,7 +106,7 @@ public class PostListActivity extends AppCompatActivity {
         });
 
     }
-    //TODO: static class vs non-static class??? final???
+
     private static class OnPostClickListener implements AdapterView.OnItemClickListener {
         private List<RedditPost> postList;
         private Context context;
