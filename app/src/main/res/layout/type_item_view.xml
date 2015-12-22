@@ -1,11 +1,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:orientation="vertical">
+        android:layout_marginTop="13dp"
+        android:background="@drawable/item_state"
+        android:orientation="vertical"
+        android:padding="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -27,12 +30,14 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginStart="5dp"
                 android:textSize="10sp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" in"
                 android:layout_gravity="bottom"
-                android:textSize="10sp"/>
+                android:text=" in"
+                android:textSize="10sp" />
+
             <TextView
                 android:id="@+id/tv_subreddit"
                 android:layout_width="wrap_content"
